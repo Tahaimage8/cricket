@@ -3,7 +3,7 @@ import AvailablePlayers from "./AvailablePlayers/AvailablePlayers";
 import SelectedPlayers from "./selectedPlayers/SelectedPlayers";
 
 
-const Players = ({playersPromise}) => {
+const Players = ({playersPromise, setCoin, coin}) => {
     // console.log(playersPromise)
  const players = use(playersPromise)
 //  console.log(players)
@@ -13,7 +13,7 @@ const [selectedType, setSelectedType] = useState('available')
         <div className="container mx-auto my-15">
             {/* players {players.length} */}
             <div className="flex justify-between items-center mb-5">
-                {selectedType ==="available"? <h2 className="font-bold text-2xl">Available PLayers </h2> :<h2 className="font-bold text-2xl">Selected PLayers</h2>}
+                {selectedType ==="available"? <h2 className="font-bold text-2xl">Available Players </h2> :<h2 className="font-bold text-2xl">Selected PLayers</h2>}
 
                 <div>
                     <button onClick={()=> setSelectedType("available")} 
@@ -24,7 +24,7 @@ const [selectedType, setSelectedType] = useState('available')
                         Selected (0)</button>
                 </div>
             </div>
-         {selectedType ==="available"?   <AvailablePlayers players={players}></AvailablePlayers> : <SelectedPlayers></SelectedPlayers>}
+         {selectedType ==="available"?   <AvailablePlayers players={players} setCoin={setCoin} coin={coin}></AvailablePlayers> : <SelectedPlayers></SelectedPlayers>}
         </div>
     );
 };
