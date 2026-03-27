@@ -12,13 +12,13 @@ const fetchPlayer = async()=>{
 function App() {
   const playersPromise = fetchPlayer();
   const [coin , setCoin] = useState(5000);
-
+  const [selectedPlayers, setSelectedPlayers] = useState([])
   return (
 <>
 <Navbar coin={coin}></Navbar>
 <Banner></Banner>
 <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
-  <Players playersPromise={playersPromise} setCoin={setCoin} coin={coin}></Players>
+  <Players playersPromise={playersPromise} setCoin={setCoin} coin={coin} selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers}></Players>
 </Suspense>
 </>
   )
