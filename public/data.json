@@ -1,0 +1,62 @@
+[
+  {
+    "playerName": "Virat Kohli",
+    "playerCountry": "India",
+    "playerType": "Batsman",
+    "rating": 95,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm medium",
+    "price": "₹12 Crore",
+    "playerImage": "https://i.ibb.co.com/N6syyR16/images.webp"
+  },
+  {
+    "playerName": "Ben Stokes",
+    "playerCountry": "England",
+    "playerType": "All-rounder",
+    "rating": 90,
+    "battingStyle": "Left-hand bat",
+    "bowlingStyle": "Right-arm fast-medium",
+    "price": "£7 Million",
+    "playerImage": "https://i.ibb.co.com/XkC8Gb5Z/images.jpg"
+  },
+  {
+    "playerName": "Babar Azam",
+    "playerCountry": "Pakistan",
+    "playerType": "Batsman",
+    "rating": 92,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": "$2 Million",
+    "playerImage": "https://i.ibb.co.com/MDgJJ5KT/licensed-image.jpg"
+  },
+  {
+    "playerName": "Rashid Khan",
+    "playerCountry": "Afghanistan",
+    "playerType": "Bowler",
+    "rating": 88,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm leg-spin",
+    "price": "$3 Million",
+    "playerImage": "https://i.ibb.co.com/TDM0MD9y/images-1.webp"
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "playerCountry": "India",
+    "playerType": "Bowler",
+    "rating": 91,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast",
+    "price": "₹8 Crore",
+    "playerImage": "https://i.ibb.co.com/YTkJqdWs/licensed-image-1.jpg"
+  },
+  {
+    "playerName": "Kane Williamson",
+    "playerCountry": "New Zealand",
+    "playerType": "Batsman",
+    "rating": 89,
+    "battingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm offbreak",
+    "price": "$1.5 Million",
+    "playerImage": "https://i.ibb.co.com/1fqdB0KP/Kane-Williamson-in-2019.jpg"
+  }
+]
