@@ -1,7 +1,7 @@
-import filter from 'daisyui/components/filter';
+
 import React from 'react';
-import { FaUser } from 'react-icons/fa';
-import { MdDelete, MdOutlineStarRate } from 'react-icons/md';
+
+import SelectedCard from '../ui/selectedCard';
 
 const SelectedPlayers = ({selectedPlayers, setSelectedPlayers,setCoin ,coin}) => {
 //    console.log(selectedPlayers, "selectedPlayers")
@@ -15,22 +15,17 @@ const handleDeleteSelectedPlayer = (player)=>{
     return (
         <div>
 <div className='space-y-4'>
-               {selectedPlayers.map((player,index)=>{
+               {selectedPlayers.length ===0 ? 
+               <div className='h-100 flex items-center justify-center flex-col gap-4'> 
+                <h2 className='text-5xl'>No PLayers Selected Yet</h2>
+                <p className='text-xl'>Go to Available tab to select players</p>
+                
+                
+                </div>:
+               selectedPlayers.map((player,index)=>{
             return(
-                <div key={index} className='flex items-center gap-6 justify-between p-10 rounded-2xl border' >
-                   <div className="flex" >
-                    <img className='h-20 w-auto' src={player?.playerImage} alt='img'/>
-                   <div className='gap-2 items-center font-semibold text-xl m-2'>
-                    <h2  className='flex items-center gap-2 '><FaUser/>{player?.playerName}</h2> 
-                    <p className='flex items-center gap-2 '><MdOutlineStarRate></MdOutlineStarRate>{player?.rating}</p>
-                    </div> 
-                   </div>
-                   <div>
-<button className='btn btn-outline text-red-500' onClick={()=>handleDeleteSelectedPlayer(player)}>
-    <MdDelete></MdDelete>
-    </button>
-                </div> 
-                </div>
+  <SelectedCard key={index} player={player}  handleDeleteSelectedPlayer={handleDeleteSelectedPlayer}></SelectedCard>
+
             )
 
            } )}

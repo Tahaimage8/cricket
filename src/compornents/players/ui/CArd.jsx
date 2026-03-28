@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 const CArd = ({player, setCoin, coin ,setSelectedPlayers, selectedPlayers }) => {
   const [isSelected, setIsSelected] = useState(false);
 // console.log(coin) 
@@ -11,11 +12,33 @@ const CArd = ({player, setCoin, coin ,setSelectedPlayers, selectedPlayers }) => 
         setCoin(coin - player.price);
            
       } else{
-        alert("taka nai gorib ")
+        
+        toast.error("You don't have money" ,{
+position: "top-right",
+autoClose: 2000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+
+
+})
         return;
       }
         setIsSelected(true);
-      alert(`${player.playerName} Is selected`)
+      
+      toast.success(`${player.playerName} Is selected`, {
+position: "top-right",
+autoClose: 2000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+})
 setSelectedPlayers([...selectedPlayers, player])
 
       }
